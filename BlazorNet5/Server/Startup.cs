@@ -1,3 +1,5 @@
+using BlazorNet5.Server.Models;
+using BlazorNet5.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,6 +24,7 @@ namespace BlazorNet5.Server
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddSingleton<IWeatherForecastService, WeatherForecastService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BlazorNet5.Shared
 {
@@ -14,4 +13,5 @@ namespace BlazorNet5.Shared
 
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
     }
+    public record WeatherForecastResult(IEnumerable<WeatherForecast> Forecasts, int Count);
 }
